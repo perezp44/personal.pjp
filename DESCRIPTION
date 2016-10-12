@@ -1,0 +1,18 @@
+Package: personal.pjp
+Type: Package
+Date: 2016-10-10
+Title: Personal functions of pjp
+Version: 0.1.0
+Author: Pedro J. Perez <pjperez@uv.es>
+Maintainer: Pedro J. Perez <pjperez@uv.es>
+Description: Funciones que utilizo habitualmente
+License: GPL-3
+LazyData: TRUE
+Imports:
+    dplyr,
+    qpcR,
+    magrittr
+RoxygenNote: 5.0.1.9000
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
