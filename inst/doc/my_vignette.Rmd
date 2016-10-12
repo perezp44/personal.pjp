@@ -1,0 +1,25 @@
+---
+title: "Vignette for pkg personal_pjp"
+author: "Pedro J. Perez"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette for pkg personal_pjp}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+De momento el pkg tiene 4 funciones:
+
+1) names_v_df_pjp(df) : metes un df y te saca (para cada columna) el % de zeros, de NAs, media etc....  
+
+2) val_unicos_df_pjp(df) : metes un df y te devuleve otro df con los valores unicos de cada columna  
+
+3) decimales_df_pjp(df, nn =2): redondea los valores de un df  
+
+4) round_nice_pjp
+
+``` yaml
+round_nice_pjp(c(-0.0002, 0.0002, 0.5, -0.5, -0.002), dig=3))   this should return c("0.000", "0.000", "0.500", "-0.500", "-0.002")
+```
