@@ -1,5 +1,5 @@
 ---
-title: "Vignette for pkg personal.pjp"
+title: "Vignette for pkg personal_pjp"
 author: "Pedro J. Perez"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
