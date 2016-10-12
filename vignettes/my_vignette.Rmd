@@ -1,10 +1,10 @@
 ---
-title: "Vignette for pkg personal.pjp"
+title: "Vignette for pkg personal pjp"
 author: "Pedro J. Perez"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette for pkg personal.pjp}
+  %\VignetteIndexEntry{Vignette for pkg personal pjp}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
