@@ -1,0 +1,7 @@
+#- funcion para reordenar un df
+movetolast <- function(data, move) {  
+  data[c(setdiff(names(data), move), move)]
+}
+
+datos <- movetolast(datos, c("viajeros", "viajeros_x"))   #- llevo estas 2 columnas al final del df
+

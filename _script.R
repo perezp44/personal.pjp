@@ -11,7 +11,7 @@ devtools::document()   #- una vez has documentado las funciones a mano para q se
 devtools::use_vignette("my_vignette") #- crea la estructura de una vignette
 devtools::build_vignettes()           #- build the vignette
 
-
+?build_vignettes
 #- instalando el pkgdesde local
 install.packages("C:/Users/perezp/Desktop/a_GIT_2016/personal.pjp", repos = NULL, type="source")
 library(personal.pjp)
@@ -49,4 +49,4 @@ devtools::install_github('perezp44/personal.pjp')
   library(personal.pjp)
 
 browseVignettes(package = "personal.pjp")
-
+vignette("my_vignette")
