@@ -1,0 +1,21 @@
+
+#----------------- grabando LOS CODIGOS en EXCEL
+#- http://altons.github.io/r/2015/02/13/quick-intro-to-xlconnect/#install
+list_codes <- list(geo_codes, pwt80, ISO_countries, country_codes_pjp, country_codes_pjp2)
+vector_names <- c("geo_codes", "pwt80", 'ISO_countries', "country_codes_pjp", "country_codes_pjp2")
+require(XLConnect)
+file_worbook =  loadWorkbook("../data/xlconnect1.xlsx",create=T)
+sapply(vector_names, function(x) createSheet(file_worbook,x)) #- crea un libro para cada df en el mismo archivo(conexion)
+#sapply(vector_names, function(x) writeWorksheet(file_worbook, list_codes$x   ,x)) #- este no me sale
+sapply(1:NROW(vector_names), function(x) writeWorksheet(file_worbook, list_codes[[x]]   ,vector_names[x]))
+#- Ruta para guardar
+ruta_jazteca.pjp <- function(file_name, extension) {
+  hora <- as.character(Sys.time())
+  hora <- gsub("\\s", ")-[", hora)   # same; note the double backslash para sustituir espacios en blanco
+  hora <- gsub(":","-", hora)
+  hora <- paste("(", hora, "]",  sep = '')
+  ruta_jazteca <- paste("./data/", as.character(file_name), hora , as.character(extension), sep = "")  
+}
+aa <- ruta_jazteca.pjp("Codebook_iso_countries",".xlsx")
+saveWorkbook(file_worbook,aa)   #- guardo los nombres para verlos
+#-----------------------------------------------------------------------

@@ -1,0 +1,23 @@
+Algunos truquitos utiles
+=================================
+
+#---------------------------------------------------------------------------------------------------- loading the libraries
+# devtools::install_github("perezp44/personal.pjp")
+libs <- c("dplyr", "ggplot2", "pwt8", "sfsmisc", "personal.pjp", "eurostat")
+sapply(libs, library, character.only = TRUE, logical.return = TRUE)
+rm(libs)
+
+#------------------------------------------------------------------------------------------------------ clear the console
+cat("\014")  #- clear the console
+
+#------------------------------------------------------------------------------------------------------ leer un .csv en Github/internete  (fijate en raw al ppio)
+library(RCurl)
+x <- getURL("https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv")
+ISO_countries <- read.csv(text = x)
+
+#------------------------------------------------------------------------------------------------------ cambias el nombre de una columna de un df
+colnames(df)[3] <- c("new_name")  #
+
+
+#------------------------------------------------------------------------------------------------------ todos los NAs de un df a cero
+df[is.na(df)] <- 0          #- todos los nas a cero
