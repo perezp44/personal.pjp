@@ -21,3 +21,26 @@ colnames(df)[3] <- c("new_name")  #
 
 #------------------------------------------------------------------------------------------------------ todos los NAs de un df a cero
 df[is.na(df)] <- 0          #- todos los nas a cero
+
+
+#------------------------------------------------------------------------------------------------------- renaming all the columns of a df
+colnames(lpl) <- paste0(colnames(lpl), '_2')
+
+
+#--------------------------------- seleccion de mapa
+data(state.regions)
+continental_us = state.regions$region[!state.regions$region %in% c("alaska", "hawaii")]
+
+
+
+
+#-------------------- BASICO
+
+df <- cars
+aa <- as.character(substitute(df))
+paste(aa, 2)
+
+bb <- substitute(df)
+
+class(bb)
+
