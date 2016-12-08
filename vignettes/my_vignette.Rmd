@@ -20,6 +20,6 @@ De momento el pkg tiene 4 funciones:
 
 4) round_nice_pjp
 
-``` yaml
+```
 round_nice_pjp(c(-0.0002, 0.0002, 0.5, -0.5, -0.002), dig=3))   this should return c("0.000", "0.000", "0.500", "-0.500", "-0.002")
 ```
