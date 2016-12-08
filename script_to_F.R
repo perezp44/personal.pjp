@@ -7,7 +7,7 @@ library(devtools)
 has_devel()        #- chequea si tiene preparado el PC
 
 
-create("C:/Users/perezp/Desktop/pkg77")   #- crea la estructura del pkg
+#create("C:/Users/perezp/Desktop/pkg77")   #- crea la estructura del pkg
 
 
 #- 1) Modifico "DESCRIPTION"
@@ -35,8 +35,10 @@ devtools::document()          #- para procesar los roxygen comments de las funci
                               #- se ha modificado "NAMESPACE"
 ?pkg4a
 #- Ya podriamos cargar nuestro pkg desde LOCAL y usarlo o "BUILD & RELOAD"
-install.packages("C:/Users/perezp/Desktop/pkg1", repos = NULL, type="source")
-library(pkg1)
+install.packages("C:/Users/perezp/Desktop/a_GIT_2016/personal.pjp", repos = NULL, type="source")
+library(personal.pjp)
+
+?arreglar_df_Eurostat
 
 
 # USANDO my package ------------------------------------------------------------------------------------------
